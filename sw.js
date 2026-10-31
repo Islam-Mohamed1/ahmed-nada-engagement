@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ahmed-nada-engagement-v5';
+const CACHE_NAME = 'ahmed-nada-engagement-v6';
 const ASSETS = [
   './',
   './index.html',
