@@ -1,9 +1,8 @@
-const CACHE_NAME = 'ahmed-nada-engagement-v4';
+const CACHE_NAME = 'ahmed-nada-engagement-v5';
 const ASSETS = [
   './',
   './index.html',
   './card.html',
-  './drive-config.js',
   './manifest.json',
   './invitation-card.png',
   './icon-192.png',
