@@ -1,11 +1,14 @@
-﻿const CACHE_NAME = 'wedding-invite-v1';
+const CACHE_NAME = 'ahmed-nada-engagement-v4';
 const ASSETS = [
   './',
   './index.html',
+  './card.html',
+  './drive-config.js',
   './manifest.json',
+  './invitation-card.png',
   './icon-192.png',
   './icon-512.png',
-  './ya_habibna.mp3'
+  './mabrouk_aleina.mp3'
 ];
 
 self.addEventListener('install', event => {
@@ -26,8 +29,10 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request).catch(() => caches.match('./index.html'));
-    })
+    fetch(event.request).then(res => {
+      const clone = res.clone();
+      caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone)).catch(() => {});
+      return res;
+    }).catch(() => caches.match(event.request).then(r => r || caches.match('./index.html')))
   );
 });

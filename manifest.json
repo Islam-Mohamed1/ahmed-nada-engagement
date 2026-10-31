@@ -1,11 +1,11 @@
 {
-  "name": "دعوة خطوبة محمد والشيماء 💍",
-  "short_name": "محمد والشيماء 💍",
-  "description": "بطاقة دعوة خطوبة البشمهندس محمد أحمد زيدان والأستاذة الشيماء محمد سلطان",
+  "name": "دعوة خطوبة أحمد وندى 💍",
+  "short_name": "أحمد وندى 💍",
+  "description": "YOU ARE CORDIALLY INVITED TO OUR ENGAGEMENT — Ahmed & Nada — Friday 20/11/2026",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#2A0812",
-  "theme_color": "#701B2E",
+  "background_color": "#F5EFE6",
+  "theme_color": "#8C6D3F",
   "orientation": "portrait",
   "icons": [
     {

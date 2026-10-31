@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعداد وتفعيل لينك جوجل درايف الأوتوماتيكي — خطوبة أحمد & ندى 💍</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="drive-config.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #f6f0e6 0%, #ede2d0 100%);
+            color: #241A12;
+            min-height: 100vh;
+            padding: 30px 16px;
+        }
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            background: #fff;
+            border: 2px solid #C5A059;
+            border-radius: 26px;
+            padding: 32px 26px;
+            box-shadow: 0 20px 55px rgba(78, 55, 27, 0.14);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 1.5px dashed rgba(154,119,56,0.4);
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+        .header h1 {
+            font-family: 'Amiri', serif;
+            font-size: 30px;
+            color: #6E502D;
+            margin-bottom: 8px;
+        }
+        .header p {
+            font-size: 14.5px;
+            color: #5A4632;
+            line-height: 1.7;
+        }
+        .step-card {
+            background: #FAF7F2;
+            border: 1.5px solid rgba(154,119,56,0.35);
+            border-radius: 18px;
+            padding: 18px 20px;
+            margin-bottom: 18px;
+        }
+        .step-title {
+            font-size: 17px;
+            font-weight: 800;
+            color: #6E502D;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .step-badge {
+            background: #6E502D;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        .step-desc {
+            font-size: 14px;
+            color: #3A2C1E;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 22px;
+            border-radius: 14px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 14.5px;
+            font-weight: 800;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #6E502D 0%, #967142 100%);
+            color: #fff;
+            box-shadow: 0 6px 18px rgba(110,80,45,0.28);
+        }
+        .btn-gold:hover { transform: translateY(-2px); }
+        .btn-outline {
+            background: #fff;
+            color: #6E502D;
+            border: 1.5px solid #6E502D;
+        }
+        .input-group {
+            margin-bottom: 14px;
+        }
+        .input-group label {
+            display: block;
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #4A341B;
+            margin-bottom: 6px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1.5px solid rgba(110,80,45,0.3);
+            border-radius: 12px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 14px;
+            direction: ltr;
+            text-align: left;
+        }
+        .status-msg {
+            display: none;
+            padding: 14px;
+            border-radius: 12px;
+            background: rgba(37, 211, 102, 0.12);
+            border: 1.5px solid #25D366;
+            color: #126b34;
+            font-weight: 700;
+            font-size: 14px;
+            margin-top: 14px;
+            text-align: center;
+        }
+        textarea.code-preview {
+            width: 100%;
+            height: 150px;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+            font-family: monospace;
+            font-size: 12px;
+            direction: ltr;
+            text-align: left;
+            background: #1e1e1e;
+            color: #f5d77f;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>☁️ إعداد لينك جوجل درايف الأوتوماتيكي — أحمد &amp; ندى 💍</h1>
+            <p>
+                هذه الصفحة تنشئ لك <strong>فولدر جوجل درايف خاص بكم</strong> يُضاف فيه أوتوماتيكياً:<br>
+                ✅ كل كلمة تهنئة يكتبها المعازيم في دفتر التهاني (في جدول Sheet + ملف نصي)<br>
+                ✅ أي صورة يرفعها الضيف من موبايله أو يتصورها بفلتر الخطوبة أو الخاتم الـ 3D<br>
+                ✅ أي تهنئة صوتية يسجلها المعازيم + طلبات الأغاني
+            </p>
+        </div>
+
+        <!-- STEP 1 -->
+        <div class="step-card">
+            <div class="step-title">
+                <span class="step-badge">1</span>
+                <span>انسخ الكود الأوتوماتيكي الجاهز</span>
+            </div>
+            <p class="step-desc">
+                اضغط على الزر بالأسفل لنسخ كود إنشاء الفولدر والحفظ التلقائي، ثم افتح موقع <strong>Google Apps Script</strong> واعمل مشروع جديد (New Project) وامسح أي كلام فيه والصق هذا الكود:
+            </p>
+            <textarea id="gsCodeArea" class="code-preview" readonly></textarea>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <button class="btn btn-gold" onclick="copyGsCode()">📋 نسخ الكود الأوتوماتيكي</button>
+                <a class="btn btn-outline" href="https://script.google.com/home/start" target="_blank">🚀 فتح Google Apps Script</a>
+            </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step-card">
+            <div class="step-title">
+                <span class="step-badge">2</span>
+                <span>استخرج لينك الدرايف والألبوم في ثواني</span>
+            </div>
+            <p class="step-desc">
+                ١. من أعلى صفحة Google Apps Script اضغط على الزر الأزرق <strong>Deploy (نشر)</strong> ثم اختر <strong>New deployment (نشر جديد)</strong>.<br>
+                ٢. اضغط على علامة الترس ⚙️ واختر <strong>Web app (تطبيق ويب)</strong>.<br>
+                ٣. في خانة <strong>Who has access (من لديه حق الوصول)</strong> اختر <strong>Anyone (أي شخص)</strong> ثم اضغط <strong>Deploy</strong> ووافق على الصلاحيات (Authorize access).<br>
+                ٤. انسخ الرابط الناتج (<strong>Web app URL</strong>) الذي ينتهي بـ <code>/exec</code>:
+                <br>💡 <em>ملاحظة رائعة: بمجرد فتح هذا الرابط في المتصفح سيظهر لك زرار مباشر يفتح فولدر جوجل درايف الخاص بصور وتهاني خطوبتكم!</em>
+            </p>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step-card">
+            <div class="step-title">
+                <span class="step-badge">3</span>
+                <span>ضع الرابط هنا لتفعيله في الموقع فوراً</span>
+            </div>
+            <div class="input-group">
+                <label>🔗 رابط Google Apps Script Web App (ينتهي بـ /exec):</label>
+                <input type="url" id="scriptUrlInput" placeholder="https://script.google.com/macros/s/......./exec">
+            </div>
+            <div class="input-group">
+                <label>📂 رابط فولدر Google Drive المشترك (اختياري — لو حابب يظهر للمعازيم زر فتح ألبوم الدرايف مباشرة):</label>
+                <input type="url" id="driveFolderInput" placeholder="https://drive.google.com/drive/folders/.......">
+            </div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <button class="btn btn-gold" onclick="saveAndGenerateConfig()">💾 حفظ وتفعيل الربط + تحميل ملف الإعدادات</button>
+                <button class="btn btn-outline" onclick="openMyDriveDashboard()">📂 فتح لوحة تحكم الدرايف الخاصة بي</button>
+                <a class="btn btn-outline" href="index.html">💌 العودة لصفحة الدعوة</a>
+            </div>
+
+            <div class="status-msg" id="saveStatusMsg">
+                ✅ تم حفظ الرابط وتفعيله بنجاح! وتم تنزيل ملف <code>drive-config.js</code> — استبدله في فولدر الموقع ليعمل مع كل المعازيم تلقائياً.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const GS_SCRIPT_CODE = `function setupWeddingDrive() {
+  var resources = getOrCreateWeddingResources_();
+  Logger.log('✅ تم تجهيز فولدر جوجل درايف ودفتر التهاني بنجاح!');
+  Logger.log('📂 رابط فولدر جوجل درايف: ' + resources.mainFolderUrl);
+  Logger.log('📊 رابط جدول التهاني: ' + resources.sheetUrl);
+  return resources;
+}
+
+function getOrCreateWeddingResources_() {
+  var props = PropertiesService.getScriptProperties();
+  var mainFolderId = props.getProperty('MAIN_FOLDER_ID');
+  var photosFolderId = props.getProperty('PHOTOS_FOLDER_ID');
+  var voiceFolderId = props.getProperty('VOICE_FOLDER_ID');
+  var sheetId = props.getProperty('SHEET_ID');
+  var textFileId = props.getProperty('TEXT_FILE_ID');
+
+  var mainFolder, photosFolder, voiceFolder, ss, textFile;
+
+  if (mainFolderId) {
+    try { mainFolder = DriveApp.getFolderById(mainFolderId); } catch (e) { mainFolder = null; }
+  }
+  if (!mainFolder) {
+    mainFolder = DriveApp.createFolder('💍 ألبوم ودفتر تهاني خطوبة أحمد وندى (Ahmed & Nada)');
+    try { mainFolder.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW); } catch (e) {}
+    props.setProperty('MAIN_FOLDER_ID', mainFolder.getId());
+  }
+
+  if (photosFolderId) {
+    try { photosFolder = DriveApp.getFolderById(photosFolderId); } catch (e) { photosFolder = null; }
+  }
+  if (!photosFolder) {
+    photosFolder = mainFolder.createFolder('📸 صور المعازيم والفلتر - Ahmed & Nada');
+    props.setProperty('PHOTOS_FOLDER_ID', photosFolder.getId());
+  }
+
+  if (voiceFolderId) {
+    try { voiceFolder = DriveApp.getFolderById(voiceFolderId); } catch (e) { voiceFolder = null; }
+  }
+  if (!voiceFolder) {
+    voiceFolder = mainFolder.createFolder('🎤 التهاني الصوتية - Ahmed & Nada');
+    props.setProperty('VOICE_FOLDER_ID', voiceFolder.getId());
+  }
+
+  if (sheetId) {
+    try { ss = SpreadsheetApp.openById(sheetId); } catch (e) { ss = null; }
+  }
+  if (!ss) {
+    ss = SpreadsheetApp.create('📖 دفتر التهاني وطلبات الأغاني — أحمد وندى');
+    var ssFile = DriveApp.getFileById(ss.getId());
+    mainFolder.addFile(ssFile);
+    try { DriveApp.getRootFolder().removeFile(ssFile); } catch (e) {}
+
+    var wishesSheet = ss.getActiveSheet();
+    wishesSheet.setName('دفتر التهاني والصور');
+    wishesSheet.appendRow(['التاريخ والوقت', 'اسم الضيف', 'نوع المشاركة', 'نص التهنئة / الكلمة', 'رابط الصورة أو الصوت في الدرايف', 'المصدر']);
+    wishesSheet.setFrozenRows(1);
+    wishesSheet.setRightToLeft(true);
+
+    var songsSheet = ss.insertSheet('طلبات الأغاني');
+    songsSheet.appendRow(['التاريخ والوقت', 'اسم الضيف', 'اسم الأغنية', 'الفنان', 'إهداء / رسالة']);
+    songsSheet.setFrozenRows(1);
+    songsSheet.setRightToLeft(true);
+
+    props.setProperty('SHEET_ID', ss.getId());
+  }
+
+  if (textFileId) {
+    try { textFile = DriveApp.getFileById(textFileId); } catch (e) { textFile = null; }
+  }
+  if (!textFile) {
+    var header = '💍 دفتر تهاني وذكريات خطوبة أحمد & ندى (Ahmed & Nada)\\r\\n📅 الجمعة ٢٠ نوفمبر ٢٠٢٦ — Vera Lounge\\r\\n═══════════════════════════════════════════════════════\\r\\n\\r\\n';
+    textFile = mainFolder.createFile('💌 كل التهاني المكتوبة - أحمد وندى.txt', header, MimeType.PLAIN_TEXT);
+    props.setProperty('TEXT_FILE_ID', textFile.getId());
+  }
+
+  return {
+    mainFolder: mainFolder,
+    photosFolder: photosFolder,
+    voiceFolder: voiceFolder,
+    ss: ss,
+    textFile: textFile,
+    mainFolderUrl: mainFolder.getUrl(),
+    photosFolderUrl: photosFolder.getUrl(),
+    sheetUrl: ss.getUrl()
+  };
+}
+
+function doGet(e) {
+  var res = getOrCreateWeddingResources_();
+  var html = '<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ألبوم ودفتر تهاني خطوبة أحمد وندى</title><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&display=swap" rel="stylesheet"><style>body{font-family:Cairo,sans-serif;background:#FAF6F0;color:#2C1E12;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;padding:20px;text-align:center}.box{background:#fff;border:2px solid #C5A059;border-radius:24px;padding:32px 24px;max-width:480px;width:100%;box-shadow:0 15px 40px rgba(0,0,0,0.1)}h1{color:#6E502D;font-size:24px;margin:0 0 8px}p{color:#5A4632;font-size:14px;line-height:1.7}.btn{display:block;text-decoration:none;padding:14px 20px;border-radius:16px;font-weight:800;margin:12px 0;font-size:15px}.btn-drive{background:linear-gradient(135deg,#6E502D,#967142);color:#fff}.btn-sheet{background:#FAF0D7;color:#4A341B;border:1.5px solid #C5A059}</style></head><body><div class="box"><div style="font-size:48px;margin-bottom:8px">💍✨</div><h1>ألبوم ودفتر تهاني أحمد & ندى</h1><p>أي تهنئة أو صورة يرفعها المعازيم أو يتصوروها بالفلتر بتتحفظ فوراً هنا:</p><a class="btn btn-drive" href="' + res.mainFolderUrl + '" target="_blank">📂 فتح فولدر Google Drive (الصور والتهاني)</a><a class="btn btn-sheet" href="' + res.photosFolderUrl + '" target="_blank">📸 فتح فولدر صور المعازيم مباشرة</a><a class="btn btn-sheet" href="' + res.sheetUrl + '" target="_blank">📊 فتح جدول دفتر التهاني والأغاني (Google Sheet)</a></div></body></html>';
+  return HtmlService.createHtmlOutput(html).setTitle('ألبوم ودفتر تهاني خطوبة أحمد وندى');
+}
+
+function doPost(e) {
+  try {
+    var res = getOrCreateWeddingResources_();
+    var raw = (e && e.postData && e.postData.contents) ? e.postData.contents : '{}';
+    var data = JSON.parse(raw);
+    var now = Utilities.formatDate(new Date(), 'Africa/Cairo', 'yyyy-MM-dd hh:mm:ss a');
+    var action = data.action || 'wish';
+    var guestName = (data.name || 'ضيف كريم').toString().trim();
+    var safeName = guestName.replace(/[\\\\/:*?"<>|]/g, '_');
+    var message = (data.message || '').toString().trim();
+    var source = (data.source || 'website').toString();
+    var wishesSheet = res.ss.getSheetByName('دفتر التهاني والصور') || res.ss.getSheets()[0];
+    var songsSheet = res.ss.getSheetByName('طلبات الأغاني') || res.ss.getSheets()[0];
+    var fileUrl = '';
+
+    if (data.image && data.image.indexOf('base64,') !== -1) {
+      var parts = data.image.split('base64,');
+      var mimeMatch = parts[0].match(/data:(.*?);/);
+      var mimeType = (mimeMatch && mimeMatch[1]) ? mimeMatch[1] : 'image/jpeg';
+      var ext = mimeType.indexOf('png') !== -1 ? '.png' : '.jpg';
+      var bytes = Utilities.base64Decode(parts[1]);
+      var stamp = Utilities.formatDate(new Date(), 'Africa/Cairo', 'yyyyMMdd_HHmmss');
+      var blob = Utilities.newBlob(bytes, mimeType, 'صورة_' + safeName + '_' + stamp + ext);
+      var savedImg = res.photosFolder.createFile(blob);
+      if (message) savedImg.setDescription('من: ' + guestName + ' | الرسالة: ' + message);
+      fileUrl = savedImg.getUrl();
+    }
+
+    if (data.audio && data.audio.indexOf('base64,') !== -1) {
+      var aParts = data.audio.split('base64,');
+      var aMimeMatch = aParts[0].match(/data:(.*?);/);
+      var aMime = (aMimeMatch && aMimeMatch[1]) ? aMimeMatch[1] : 'audio/webm';
+      var aBytes = Utilities.base64Decode(aParts[1]);
+      var aStamp = Utilities.formatDate(new Date(), 'Africa/Cairo', 'yyyyMMdd_HHmmss');
+      var aBlob = Utilities.newBlob(aBytes, aMime, 'تهنئة_صوتية_' + safeName + '_' + aStamp + '.webm');
+      fileUrl = res.voiceFolder.createFile(aBlob).getUrl();
+    }
+
+    if (action === 'song_request') {
+      songsSheet.appendRow([now, guestName, data.songTitle || '', data.songArtist || '', message]);
+    } else {
+      var typeLabel = '✍️ تهنئة كتابية';
+      if (action === 'guest_photo') typeLabel = '📸 صورة مضافة من الضيف';
+      else if (action === 'photo') typeLabel = '🤳 صورة بفلتر الخطوبة';
+      else if (action === 'voice') typeLabel = '🎤 تهنئة صوتية';
+      else if (fileUrl) typeLabel = '✍️📸 تهنئة مع صورة';
+
+      wishesSheet.appendRow([now, guestName, typeLabel, message || 'صورة تذكارية لألبوم العروسين', fileUrl, source]);
+      if (message || fileUrl) {
+        try {
+          var currentTxt = res.textFile.getBlob().getDataAsString('UTF-8');
+          var entry = '📅 ' + now + '\\r\\n👤 الاسم: ' + guestName + ' (' + typeLabel + ')\\r\\n' + (message ? '💌 الرسالة: ' + message + '\\r\\n' : '') + (fileUrl ? '🔗 الملف: ' + fileUrl + '\\r\\n' : '') + '───────────────────────────────────────────────\\r\\n';
+          res.textFile.setContent(currentTxt + entry);
+        } catch (txtErr) {}
+      }
+    }
+    return ContentService.createTextOutput(JSON.stringify({ status: 'ok', driveFolderUrl: res.mainFolderUrl, fileUrl: fileUrl })).setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ status: 'error', message: err.toString() })).setMimeType(ContentService.MimeType.JSON);
+  }
+}`;
+
+        document.getElementById('gsCodeArea').value = GS_SCRIPT_CODE;
+
+        if (window.ENGAGEMENT_CONFIG) {
+            document.getElementById('scriptUrlInput').value = window.ENGAGEMENT_CONFIG.SCRIPT_URL || '';
+            document.getElementById('driveFolderInput').value = window.ENGAGEMENT_CONFIG.DRIVE_FOLDER_URL || '';
+        }
+
+        function copyGsCode() {
+            const area = document.getElementById('gsCodeArea');
+            area.select();
+            navigator.clipboard.writeText(area.value).then(() => {
+                alert('✅ تم نسخ الكود بنجاح! افتح الآن Google Apps Script والصق الكود فيه.');
+            }).catch(() => {
+                document.execCommand('copy');
+                alert('✅ تم نسخ الكود بنجاح!');
+            });
+        }
+
+        function saveAndGenerateConfig() {
+            const scriptUrl = document.getElementById('scriptUrlInput').value.trim();
+            const driveUrl = document.getElementById('driveFolderInput').value.trim();
+            if (!scriptUrl) {
+                alert('من فضلك ضع رابط Google Apps Script أولاً');
+                return;
+            }
+            localStorage.setItem('ahmed_nada_script_url', scriptUrl);
+            localStorage.setItem('ahmed_nada_drive_folder_url', driveUrl);
+
+            const jsContent = `window.ENGAGEMENT_CONFIG = {\n    SCRIPT_URL: localStorage.getItem('ahmed_nada_script_url') || '${scriptUrl}',\n    DRIVE_FOLDER_URL: localStorage.getItem('ahmed_nada_drive_folder_url') || '${driveUrl}'\n};\n`;
+            const blob = new Blob([jsContent], { type: 'application/javascript;charset=utf-8' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'drive-config.js';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            document.getElementById('saveStatusMsg').style.display = 'block';
+        }
+
+        function openMyDriveDashboard() {
+            const url = document.getElementById('scriptUrlInput').value.trim();
+            if (!url) {
+                alert('ضع رابط Google Apps Script أولاً لفتح لوحة تحكم الفولدر والجدول');
+                return;
+            }
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
