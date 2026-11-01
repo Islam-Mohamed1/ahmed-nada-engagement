@@ -9,17 +9,17 @@
     <!-- Open Graph / WhatsApp Rich Preview Tags -->
     <meta property="og:title" content="دعوة خطوبة أحمد & ندى | Ahmed & Nada Engagement">
     <meta property="og:description" content="نتشرف بحضوركم لتشاركونا فرحتنا يوم الجمعة ٢٠ نوفمبر ٢٠٢٦ — الساعة ٦ مساءً في Vera Lounge 💍🤍">
-    <meta property="og:image" content="og-preview.png">
+    <meta property="og:image" content="https://islam-mohamed1.github.io/ahmed-nada-engagement/og-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="./">
+    <meta property="og:url" content="https://islam-mohamed1.github.io/ahmed-nada-engagement/">
     
     <!-- Twitter Card Data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="دعوة خطوبة أحمد & ندى | Ahmed & Nada Engagement">
     <meta name="twitter:description" content="نتشرف بحضوركم لتشاركونا فرحتنا يوم الجمعة ٢٠ نوفمبر ٢٠٢٦ — الساعة ٦ مساءً في Vera Lounge 💍🤍">
-    <meta name="twitter:image" content="og-preview.png">
+    <meta name="twitter:image" content="https://islam-mohamed1.github.io/ahmed-nada-engagement/og-preview.png">
         <!-- Cache Busting Tags -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -3801,8 +3801,8 @@
     /* ══════ 3. زرار الشير للواتساب (Share on WhatsApp) 📲 ══════ */
     function shareWhatsApp(e) {
         if (e) e.stopPropagation();
-        const url = window.location.href;
-        const msg = `بارك الله لهما وبارك عليهما وجمع بينهما في خير 🤍💍\n\nYOU ARE CORDIALLY INVITED TO OUR ENGAGEMENT\nيسعدنا ويشرفنا دعوتكم لحضور حفل خطوبة:\nأحمد & ندى (Ahmed & Nada)\n\n📅 الجمعة ٢٠ نوفمبر ٢٠٢٦ — الساعة ٦ مساءً (6:00 PM)\n📍 المكان: Vera Lounge\n🗺️ لوكيشن القاعة: https://maps.app.goo.gl/MPCirZBojiop6hJk8\n\n👇 بطاقة الدعوة الإلكترونية الخاصة بكم:\n${url}`;
+        const url = 'https://islam-mohamed1.github.io/ahmed-nada-engagement/';
+        const msg = `بارك الله لهما وبارك عليهما وجمع بينهما في خير 🤍💍\n\n📍 المكان: Vera Lounge\n🗺️ لوكيشن الكافية: https://maps.app.goo.gl/MPCirZBojiop6hJk8\n\n👇 بطاقة الدعوة الإلكترونية:\n${url}`;
         window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
